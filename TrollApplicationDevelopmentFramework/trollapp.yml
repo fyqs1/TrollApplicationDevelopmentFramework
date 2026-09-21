@@ -1,0 +1,46 @@
+# 复制本框架到工作目录后：
+# 1. 改下面的全局信息
+# 2. 把 Xcode 业务源码目录贴进 App/<名字>/（与 HelloTroll 展位共存）
+# 3. 把 pack_source 改成那个目录名
+# 4. ./scripts/package_ipa.sh  →  work/<pack_source>/dist/<name>.ipa
+#    成功后备份 trollapp.used.yml 到同一隔离目录
+
+app:
+  name: HelloTroll
+  display_name: HelloTroll
+  bundle_id: com.fyqs.HelloTroll
+  version: "1.0.0"
+  build: "1"
+  min_ios: "15.0"
+
+# 只打包 App/ 下的这个子目录。HelloTroll 是展位，可与业务目录共存。
+pack_source: HelloTroll
+
+capabilities:
+  - platform
+  - unsandboxed
+  - sysctl
+  - gestalt
+  - get_task_allow
+
+packet_tunnel: false
+
+# Xcode 里加的 SPM 在这里再声明一次；打包时 xcodegen 会拉包。不要拷 .xcodeproj。
+# packages:
+#   - name: Adjust
+#     url: https://github.com/adjust/ios_sdk
+#     from: "5.8.0"
+#     product: AdjustSdk
+#   - name: AppsFlyer
+#     url: https://github.com/AppsFlyerSDK/AppsFlyerFramework-Static
+#     from: "6.15.0"
+#     product: AppsFlyerLib
+# frameworks:
+#   - AdSupport
+#   - AdServices
+#   - AppTrackingTransparency
+#   - StoreKit
+# info:
+#   usage:
+#     tracking: 用于广告归因。
+

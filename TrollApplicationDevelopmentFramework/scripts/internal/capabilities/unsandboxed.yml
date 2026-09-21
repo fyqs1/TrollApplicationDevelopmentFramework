@@ -1,0 +1,8 @@
+id: unsandboxed
+title: Disable App Sandbox
+summary: Drop the container sandbox so the app can reach paths outside its own Data container.
+implies:
+  - platform
+entitlements:
+  com.apple.private.security.no-sandbox: true
+  com.apple.private.security.container-required: false

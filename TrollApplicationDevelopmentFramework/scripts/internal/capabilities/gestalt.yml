@@ -1,0 +1,6 @@
+id: gestalt
+title: MobileGestalt
+summary: Allow mach lookup of com.apple.mobilegestalt.xpc for device identity keys.
+entitlements:
+  com.apple.security.exception.mach-lookup.global-name:
+    - com.apple.mobilegestalt.xpc

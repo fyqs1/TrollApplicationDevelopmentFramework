@@ -1,0 +1,5 @@
+id: get_task_allow
+title: Debugger attach
+summary: Allow task_for_pid-style debug attach (get-task-allow). Useful on TrollStore builds.
+entitlements:
+  get-task-allow: true

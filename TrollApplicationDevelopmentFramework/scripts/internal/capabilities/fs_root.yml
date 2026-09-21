@@ -1,0 +1,10 @@
+id: fs_root
+title: Filesystem root read/write
+summary: Absolute-path exceptions for /. High privilege. Prefer mcm unless you need a full file browser.
+implies:
+  - unsandboxed
+entitlements:
+  com.apple.security.exception.files.absolute-path.read-only:
+    - /
+  com.apple.security.exception.files.absolute-path.read-write:
+    - /

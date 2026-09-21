@@ -1,0 +1,8 @@
+id: fs_root_readonly
+title: Filesystem root read-only
+summary: Absolute-path read exception for / without write.
+implies:
+  - unsandboxed
+entitlements:
+  com.apple.security.exception.files.absolute-path.read-only:
+    - /

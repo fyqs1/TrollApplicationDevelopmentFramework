@@ -1,0 +1,8 @@
+id: sysctl
+title: sysctl read
+summary: Allow hw./kern./net. sysctl reads used by CPU, memory, and process inventory.
+entitlements:
+  com.apple.security.exception.sysctl.read-only:
+    - hw.
+    - kern.
+    - net.

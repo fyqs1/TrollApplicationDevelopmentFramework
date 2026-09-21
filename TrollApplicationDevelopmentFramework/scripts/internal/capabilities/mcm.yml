@@ -1,0 +1,8 @@
+id: mcm
+title: Mobile Container Manager
+summary: Read MCM metadata to map bundle ids to Data and App Group containers.
+implies:
+  - unsandboxed
+entitlements:
+  com.apple.private.security.storage.AppDataContainers: true
+  com.apple.private.mobilecontainermanager.allowed: true

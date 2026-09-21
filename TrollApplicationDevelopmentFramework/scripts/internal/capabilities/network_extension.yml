@@ -1,0 +1,13 @@
+id: network_extension
+title: Packet Tunnel / VPN API
+summary: Developer Network Extension entitlements. Enable extensions.packet_tunnel to embed the appex.
+frameworks:
+  - NetworkExtension
+entitlements:
+  com.apple.developer.networking.networkextension:
+    - packet-tunnel-provider
+  com.apple.developer.networking.vpn.api:
+    - allow-vpn
+tunnel_entitlements:
+  com.apple.developer.networking.networkextension:
+    - packet-tunnel-provider

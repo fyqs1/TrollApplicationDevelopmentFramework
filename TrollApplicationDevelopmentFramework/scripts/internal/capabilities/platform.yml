@@ -1,0 +1,5 @@
+id: platform
+title: Platform application
+summary: Treat the process as a platform app so LaunchServices can enumerate other apps.
+entitlements:
+  platform-application: true

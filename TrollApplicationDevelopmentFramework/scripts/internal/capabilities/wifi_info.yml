@@ -1,0 +1,11 @@
+id: wifi_info
+title: Wi-Fi SSID
+summary: CaptiveNetwork / NEHotspotNetwork SSID access. iOS still requires When In Use location permission.
+frameworks:
+  - CoreLocation
+  - SystemConfiguration
+  - NetworkExtension
+usage_keys:
+  - location
+entitlements:
+  com.apple.developer.networking.wifi-info: true
